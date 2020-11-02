@@ -66,7 +66,7 @@ const getPrTemplate = async (client, paths) => {
     if (!paths.length) {
       return undefined
     }
-    core.warning(`error getting pr template (${prTemplatePath}): ${error.message}`)
+    core.debug(`error getting pr template (${prTemplatePath}): ${error.message}`)
     return getPrTemplate(client, paths)
   }
 }
